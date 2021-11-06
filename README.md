@@ -18,6 +18,10 @@
 #...
 
 adding some things to the fix branch
+<<<<<<< HEAD
 >>>>>>> origin/fix
 explanations
 testing
+=======
+>>>>>>> fix
+>>>>>>> b320eaef6c8bde46b4a0899edcc9dab0eb3a2cf5
