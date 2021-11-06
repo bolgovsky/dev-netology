@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #игнорировать ВЕЗДЕ в рабочей папке проекта, где провели инициализацию git init:
 
 #1 скрытые папки terraform включая содержимое 
@@ -12,3 +13,9 @@
 
 #6 скрытый файлы terraformrc и файлы terraform.rc 
 
+=======
+# dev-netology
+#...
+
+adding some things to the fix branch
+>>>>>>> origin/fix
