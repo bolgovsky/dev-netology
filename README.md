@@ -19,3 +19,4 @@
 
 adding some things to the fix branch
 >>>>>>> origin/fix
+explanations
