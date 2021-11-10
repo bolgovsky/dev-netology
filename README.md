@@ -5,14 +5,14 @@ https://github.com/bolgovsky/dev-netology/network
 
 ![img_1.png](img_1.png)
 ___
-###!Исходные: `WSL->Ubuntu` в локальном репозитории, в ветке `main` 
+## Исходные: `WSL->Ubuntu` в локальном репозитории, в ветке `main` 
 ```commandline
 denis@DenisPC:/mnt/c/Users/Денис/PycharmProjects/dev-netology/
 ```
 для удобства опустим
 ___
 
-#Задание №1 – Ветвление, merge и rebase.
+## Задание №1 – Ветвление, merge и rebase.
 ### 1. Создаем необходимое окружение по заданию
     
     mkdir branching
