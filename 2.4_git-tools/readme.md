@@ -1,4 +1,6 @@
 ###Домашнее задание к занятию «2.4. Инструменты Git»
+
+
 Для выполнения заданий в этом разделе давайте склонируем репозиторий с исходным кодом терраформа https://github.com/hashicorp/terraform
     
     git clone https://github.com/hashicorp/terraform.git terraform
@@ -10,7 +12,7 @@
 
 1. Найдите полный хеш и комментарий коммита, хеш которого начинается на aefea. 
 
-2. Ответ:<b> `aefead2207ef7e2aa5dc81a34aedf0cad4c32545` </b>
+Ответ:<b> `aefead2207ef7e2aa5dc81a34aedf0cad4c32545` </b>
 
 ```bash
 git show aefea
@@ -21,7 +23,7 @@ commit aefead2207ef7e2aa5dc81a34aedf0cad4c32545
 
 2. Какому тегу соответствует коммит 85024d3?
 
-3. Ответ:<b>`v0.12.23`</b>
+Ответ:<b>`v0.12.23`</b>
 
 ```bash
 git show 85024d3
@@ -32,7 +34,7 @@ commit 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
 
 3. Сколько родителей у коммита b8d720? Напишите их хеши.
 
-4. Ответ:<b>`ДВА РОДИТЕЛЯ`: `56cd7859e05c36c06b56d013b55a252d0bb7e158`, `9ea88f22fc6269854151c571162c5bcf958bee2b`</b>
+Ответ:<b>`ДВА РОДИТЕЛЯ`: `56cd7859e05c36c06b56d013b55a252d0bb7e158`, `9ea88f22fc6269854151c571162c5bcf958bee2b`</b>
 
 ```bash
 git show b8d720^@ --oneline
@@ -63,9 +65,9 @@ git log --oneline --graph b8d720
 
 4. Перечислите хеши и комментарии всех коммитов которые были сделаны между тегами v0.12.23 и v0.12.24.<br>
 
-5. Ответ:
-<br>
-6. 
+Ответ:
+
+
 <table align="left" style='font-family:"Courier New", Courier, monospace; font-size:80%'>
     <tr> 
         <td align="center"> <b>HASH </td><td align="center"> <b> COMMIT </td>
@@ -99,6 +101,8 @@ git log --oneline --graph b8d720
     </tr>
 </table>
 
+<br>
+
 Здесь для вывода прямо по заданию надо использовать функцию форматирования вывода и убрать лишнюю строчку коммита крайнего тега:
 
 ```bash
@@ -108,11 +112,13 @@ git log --oneline --graph b8d720
 ---
 
 5. Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит так func providerSource(...) (вместо троеточего перечислены аргументы).<br>
+
 Ответ: 
+
 <b> `8c928e83589d90a031f811fae52a81be7153e82f` </b> <br><br>
 
 Для начала найдём В КАКИХ ФАЙЛАХ вообще искать данную функцию: 
-6. 
+
 ```bash
 git grep 'func providerSource'
 provider_source.go:func providerSource(configs []*cliconfig.ProviderInstallation, services *disco.Disco) (getproviders.Source, tfdiags.Diagnostics) {
@@ -148,6 +154,7 @@ Date:   Thu Apr 2 18:04:39 2020 -0700
 ```
 
 ---
+
 6. Найдите все коммиты в которых была изменена функция globalPluginDirs.<br>
 
 Ответ:
@@ -173,6 +180,8 @@ Date:   Thu Apr 2 18:04:39 2020 -0700
     </tr>
 </table>
 
+<br>
+
 Делаем все по аналогии с п.5, но удобнее вывод сокращенный:
 
 ```bash
@@ -180,7 +189,6 @@ git log  -L :globalPluginDirs:plugins.go --pretty=oneline
 ```
 
 7. Кто автор функции synchronizedWriters?
-<br>
 
 Ответ: `Author: Martin Atkins <mart@degeneration.co.uk>`
 
