@@ -10,7 +10,7 @@ write(2, "/bin/bash: cd /tmp: No such file"..., 46/bin/bash: cd /tmp: No such fi
 ```
 Ответ: openat
 
-2. file ищет в : `/usr/share/misc/magic.mgc`
+2. file ищет в : `/usr/share/misc/magic.mgc` (symbolic link to ../../lib/file/magic.mgc)
 ```bash 
 strace file readme.md 2>&1 | grep openat
 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
@@ -98,7 +98,8 @@ vagrant@vagrant:~$ echo $?
 - o pipefail - возвращаемое значение конвейера - это статус последняя команда для выхода с ненулевым статусом, или ноль, если ни одна команда не завершилась с ненулевым статусом.
 
 9. Используя -o stat для ps, определите, какой наиболее часто встречающийся статус у процессов в системе. В man ps ознакомьтесь (/PROCESS STATE CODES) что значат дополнительные к основной заглавной буквы статуса процессов. Его можно не учитывать при расчете (считать S, Ss или Ssl равнозначными).
-Ответ:   S - прерывистый сон (ожидает события для завершения)
+
+1Ответ:   S - прерывистый сон (ожидает события для завершения)
 ```bash 
 vagrant@vagrant:~$ ps -axo stat --no-header| sort | uniq -c -w 1 | sort -r
      45 S
