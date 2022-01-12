@@ -1,0 +1,45 @@
+vagrant@vagrant:~$ ssh-copy-id vagrant@192.168.11.10
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/vagrant/.ssh/id_rsa.pub"
+The authenticity of host '192.168.11.10 (192.168.11.10)' can't be established.
+ECDSA key fingerprint is SHA256:wSHl+h4vAtTT7mbkj2lbGyxWXWTUf6VUliwpncjwLPM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+The authenticity of host '192.168.11.10 (192.168.11.10)' can't be established.
+ECDSA key fingerprint is SHA256:wSHl+h4vAtTT7mbkj2lbGyxWXWTUf6VUliwpncjwLPM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+vagrant@192.168.11.10's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'vagrant@192.168.11.10'"
+and check to make sure that only the key(s) you wanted were added.
+
+
+
+vagrant@vagrant:~$ ssh 'vagrant@192.168.11.10
+> ^C
+vagrant@vagrant:~$ ssh vagrant@192.168.11.10
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-80-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed 12 Jan 2022 12:10:30 AM UTC
+
+  System load:  0.12              Processes:             115
+  Usage of /:   2.3% of 61.31GB   Users logged in:       1
+  Memory usage: 15%               IPv4 address for eth0: 10.0.2.15
+  Swap usage:   0%                IPv4 address for eth1: 192.168.11.10
+
+
+This system is built by the Bento project by Chef Software
+More information can be found at https://github.com/chef/bento
+Last login: Wed Jan 12 00:07:58 2022 from 10.0.2.2
+
+
+
+vagrant@vagrant:~$ exit
+logout
+Connection to 192.168.11.10 closed.
