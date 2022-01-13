@@ -145,10 +145,11 @@ vagrant@vagrant:~$ cat ip.log
 
 ### Ваш скрипт:
 ```bash
- echo [04-script-01-bash] | awk '/(^\[[0-9][0-9]\-([a-zA-Z0-9].*)\]){0,30}$/'
+ echo [04-script-01-bash] | awk '/(^\[[0-9][0-9]-([a-zA-Z0-9].*)\]-([a-zA-Z0-9].*)){0,30}$'
  [04-script-01-bash] 
+ 
 ```
-
+ververveverv
 ```
 vi .git\hooks\commit-msg 
 
@@ -159,4 +160,5 @@ then
 puts "[POLICY] Your message is not formatted correctly"
 exit 1
 fi
+
 ```
