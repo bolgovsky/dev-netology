@@ -149,7 +149,7 @@ vagrant@vagrant:~$ cat ip.log
  [04-script-01-bash] 
  
 ```
-ververvevervrtbgrbtwdqwntythy
+
 ```
 vi .git\hooks\commit-msg 
 
