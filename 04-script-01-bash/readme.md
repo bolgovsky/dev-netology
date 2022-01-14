@@ -166,6 +166,13 @@ else
     exit 1
 fi
 
-adde
+
+
+git commit -m "1"
+[POLICY] Aborting commit due to empty commit message or content.
+
+git commit -m "[04-script-01-bash]-check1 "
+[main 97d8795] [04-script-01-bash]-check1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 ```
