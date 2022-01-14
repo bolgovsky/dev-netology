@@ -145,7 +145,7 @@ vagrant@vagrant:~$ cat ip.log
 
 ### Ваш скрипт:
 ```bash
- echo [04-script-01-bash] | awk '/(^\[[0-9][0-9]-([a-zA-Z0-9].*)\]-([a-zA-Z0-9].*)){0,30}$'
+ echo [04-script-01-bash] | awk '/(^\[[0-9][0-9]-([a-zA-Z0-9].*)\]-([a-zA-Z0-9].*)){0,30}$/'
  [04-script-01-bash] 
  
 ```
@@ -153,12 +153,19 @@ vagrant@vagrant:~$ cat ip.log
 ```
 vi .git\hooks\commit-msg 
 
-!/usr/bin/env bash
-ARGV[0] | awk '/(^\[[0-9][0-9]\-([a-zA-Z0-9].*)\]){0,30}$/'
-if (( $? != 0))
+#!/bin/sh
+
+TEXT=$(cat "$1" | awk '/(^\[[0-9][0-9]-([a-zA-Z0-9].*)\]-([a-zA-Z0-9].*)){0,30}$/')
+
+if [ -n "$TEXT" ]
 then
-puts "[POLICY] Your message is not formatted correctly"
-exit 1
+       echo "" >> "$1"
+       echo $TEXT >> "$1"
+else
+    echo "[POLICY] Aborting commit due to empty commit message or content."
+    exit 1
 fi
+
+
 
 ```
