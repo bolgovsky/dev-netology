@@ -13,7 +13,7 @@ if is_path != True:
 bash_command = ["cd " + path, "git status"]
 try:
     result_os = os.popen(' && '.join(bash_command)).read()
-except:
+except :
     result_os = ''
 print("Что-то пошло не так - скорее всего папка не является git-репозиторием!")
 #print('result_os = '+result_os)
